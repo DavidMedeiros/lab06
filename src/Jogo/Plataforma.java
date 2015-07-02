@@ -1,4 +1,4 @@
-/* 114211306 - David de Medeiros Souza: LAB 6- Turma 3 */
+/* 114211306 - David de Medeiros Souza: LAB 6 - Turma 3 */
 
 package Jogo;
 
@@ -52,7 +52,7 @@ public class Plataforma extends Jogo {
 	/**
 	 * Metodo utilizado para indicar o tipo do jogo.
 	 * 
-	 * @return Retorna o nome da classe.
+	 * @return Retorna o nome do jogo +  nome da classe.
 	 */
 	
 	@Override

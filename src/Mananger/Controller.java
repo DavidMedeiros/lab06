@@ -1,4 +1,4 @@
-/* 114211306 - David de Medeiros Souza: LAB 6- Turma 3 */
+/* 114211306 - David de Medeiros Souza: LAB 6 - Turma 3 */
 
 package Mananger;
 
@@ -12,17 +12,17 @@ import Jogo.JogoFactory;
 import Usuario.Usuario;
 
 public class Controller {
-	
+
 	private JogoFactory factory;
 	private double totalPrecoJogo;
 	private Loja loja;
-	
+
 	public Controller() {
 		this.factory = new JogoFactory();
 		this.loja = new Loja();
 		this.totalPrecoJogo = 0;
 	}
-	
+
 	/**
 	 * Metodo utilizado para criar um jogo do tipo que eh especificado no
 	 * parametro. Toda a criacao do jogo ocorre no factory.

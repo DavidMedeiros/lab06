@@ -142,8 +142,6 @@ public abstract class Jogo implements Comparable<Jogo> {
 
 	/**
 	 * Metodo para alteracao do conjunto de jogabilidades.
-	 * 
-	 * @return HashSet<Jogabilidade> - Cojunto de jogabilidades.
 	 */
 
 	public void setJogabilidades(HashSet<Jogabilidade> jogabilidades) {

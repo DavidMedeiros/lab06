@@ -1,6 +1,4 @@
-/* 114211306 - David de Medeiros Souza: LAB 6- Turma 3 */
-
-// TODO Javadoc
+/* 114211306 - David de Medeiros Souza: LAB 6 - Turma 3 */
 
 package Usuario;
 
@@ -17,8 +15,9 @@ public class Usuario implements Comparable<Usuario> {
 	private String nome;
 	private String login;
 	private double precoTotalArrecadado;
-	protected CatalogoJogos catalogoJogos;
 	private Jogador jogador;
+	
+	protected CatalogoJogos catalogoJogos;
 	protected int x2p;
 	protected double dinheiro;
 	protected double precoComDesconto;
@@ -51,6 +50,19 @@ public class Usuario implements Comparable<Usuario> {
 		this.jogador = new Noob();
 	}
 	
+	/**
+	 * Metodo utilizado para indicar se um usuario ganhou a partida. O x2p é
+	 * alterado de acordo com a forma assumida pelo jogador.
+	 * 
+	 * @param nomeJogo
+	 *            Nome do jogo.
+	 * @param score
+	 *            Score do jogo.
+	 * @param zerou
+	 *            boolean indicando se zerou o jogo.
+	 * @throws DadoInvalidoException
+	 */
+	
 	public void ganhouPartida(String nomeJogo, int score, boolean zerou) throws DadoInvalidoException {
 		for (Jogo jogo : getListaDeJogosComprados()) {
 			if (jogo.getNome().equals(nomeJogo)) {
@@ -65,6 +77,19 @@ public class Usuario implements Comparable<Usuario> {
 		}
 	}
 
+	/**
+	 * Metodo utilizado para indicar se um usuario perdeu a partida. O x2p é
+	 * alterado de acordo com a forma assumida pelo jogador.
+	 * 
+	 * @param nomeJogo
+	 *            Nome do jogo.
+	 * @param score
+	 *            Score do jogo.
+	 * @param zerou
+	 *            boolean indicando se zerou o jogo.
+	 * @throws DadoInvalidoException
+	 */
+	
 	public void perdeuPartida(String nomeJogo, int score, boolean zerou) throws DadoInvalidoException {
 		for (Jogo jogo : getListaDeJogosComprados()) {
 			if (jogo.getNome().equals(nomeJogo)) {
@@ -79,9 +104,17 @@ public class Usuario implements Comparable<Usuario> {
 		}
 	}
 	
+	/**
+	 * Metodo utilizado para alterar a instancia de jogador para veterano.
+	 */
+	
 	public void transformaEmVeterano() {
 		this.jogador = new Veterano();
 	}
+	
+	/**
+	 * Metodo utilizado para alterar a instancia de jogador para noob.
+	 */
 	
 	public void transformaEmNoob() {
 		this.jogador = new Noob();
@@ -223,9 +256,20 @@ public class Usuario implements Comparable<Usuario> {
 		this.dinheiro = dinheiro;
 	}
 
+	/**
+	 * Metodo para retorno do catalogo de jogos.
+	 * 
+	 * @return Catalogo de jogos.
+	 */
+	
 	public CatalogoJogos getCatalogoJogos() {
 		return catalogoJogos;
 	}
+	
+	/**
+	 * Metodo para a comparacao de um usuario, através da sua quantidade de x2p.
+	 * A quantidade é comparada da maior para o menor.
+	 */
 	
 	@Override
 	public int compareTo(Usuario outroUsuario) {
@@ -238,6 +282,12 @@ public class Usuario implements Comparable<Usuario> {
 		return 0;
 	}
 
+	/**
+	 * Metodo para retorno do jogador.
+	 * 
+	 * @return Jogador.
+	 */
+	
 	public Jogador getJogador() {
 		return jogador;
 	}

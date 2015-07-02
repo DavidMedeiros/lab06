@@ -51,7 +51,7 @@ public class Luta extends Jogo {
 	/**
 	 * Metodo utilizado para indicar o tipo do jogo.
 	 * 
-	 * @return Retorna o nome da classe.
+	 * @return Retorna o nome do jogo +  nome da classe.
 	 */	
 
 	@Override

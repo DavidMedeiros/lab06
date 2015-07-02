@@ -1,4 +1,4 @@
-/* 114211306 - David de Medeiros Souza: LAB 6- Turma 3 */
+/* 114211306 - David de Medeiros Souza: LAB 6 - Turma 3 */
 
 package Jogo;
 
